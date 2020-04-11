@@ -1,7 +1,7 @@
-# Todo List
+# Todo Api
 
-Yet another todo app, hooray! This one uses Node/Express/Mongo on the backend and some simple JS on the client.
+Simple todo api that I can access from different clients.
 
 ## Demo
 
-[Todo List](https://ds-dev-todo-list.herokuapp.com/)
+[Todo API](https://ds-dev-todo-api.herokuapp.com/)

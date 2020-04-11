@@ -11,7 +11,7 @@ const todosRoutes = require('./routes/todos');
 
 const Todo = require('mongoose').model('Todo');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(morgan('dev'));
 app.use('/api/todos', todosRoutes);

@@ -10,8 +10,7 @@ router.use((req, res, next) => {
   next();
 });
 
-router.options((req, res, next) => {
-  console.log('hit');
+router.options('/', (req, res, next) => {
   res.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
   res.set('Access-Control-Allow-Headers', 'content-type');
   res.set('Access-Control-Max-Age', 86400);

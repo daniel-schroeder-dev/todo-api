@@ -8,7 +8,6 @@ require('./db-connect');
 require('./models/todo');
 
 const todosRoutes = require('./routes/todos');
-
 const Todo = require('mongoose').model('Todo');
 
 const PORT = process.env.PORT || 8080;

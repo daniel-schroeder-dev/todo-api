@@ -14,6 +14,10 @@ const Todo = require('mongoose').model('Todo');
 const PORT = process.env.PORT || 8080;
 
 app.use(morgan('dev'));
+app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  next();
+});
 app.use('/api/todos', todosRoutes);
 
 app.listen(PORT, () => {

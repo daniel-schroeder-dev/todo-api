@@ -5,6 +5,18 @@ const { getTodos, postTodo, getTodo, putTodo, deleteTodo } = require('../helpers
 const jsonBodyParser = bodyParser.json();
 const router = express.Router();
 
+router.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+router.options((req, res, next) => {
+  res.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type');
+  res.set('Access-Control-Max-Age', 86400);
+  next();
+});
+
 router.route('/')
   .get(getTodos)
   .post(jsonBodyParser, postTodo);
